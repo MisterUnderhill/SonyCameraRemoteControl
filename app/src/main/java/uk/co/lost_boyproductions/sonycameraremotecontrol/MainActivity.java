@@ -15,9 +15,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        final TextView helloTextView = (TextView) findViewById(R.id.text_view_id);
-//        helloTextView.setText(R.string.hello_world);
-
 //        lensZoom.setMax(100);     // crashes app
 //        lensZoom.setMin(0);       // crashes app
 

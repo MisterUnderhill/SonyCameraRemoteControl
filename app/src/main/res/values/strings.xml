@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Sony Camera Remote Control</string>
-    <string name="hello_world">Hello There</string>
+    <string name="lensZoomMinName">W</string>
+    <string name="lensZoomMaxName">T</string>
 </resources>
