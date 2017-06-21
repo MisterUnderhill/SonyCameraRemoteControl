@@ -44,4 +44,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
+    <SurfaceView
+        android:id="@+id/camerapreview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.91"
+        tools:layout_editor_absoluteX="-142dp"
+        tools:layout_editor_absoluteY="447dp"
+        app:layout_constraintDimensionRatio="w,4:3" />
+
+
 </android.support.constraint.ConstraintLayout>
