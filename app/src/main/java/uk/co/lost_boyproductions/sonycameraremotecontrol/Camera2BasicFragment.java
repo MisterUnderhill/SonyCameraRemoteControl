@@ -76,52 +76,17 @@ public class Camera2BasicFragment extends Fragment
         ORIENTATIONS.append(Surface.ROTATION_270, 180);
     }
 
-    /**
-     * Tag for the {@link Log}.
-     */
-    private static final String TAG = "Camera2BasicFragment";
+    private static final String TAG = "Camera2BasicFragment"; // Tag for the {@link Log}.
+    private static final int STATE_PREVIEW = 0;  // Camera state: Showing camera preview.
+    private static final int STATE_WAITING_LOCK = 1;  // Camera state: Waiting for the focus to be locked.
+    private static final int STATE_WAITING_PRECAPTURE = 2;  // Camera state: Waiting for the exposure to be precapture state.
+    private static final int STATE_WAITING_NON_PRECAPTURE = 3;  // Camera state: Waiting for the exposure state to be something other than precapture.
+    private static final int STATE_PICTURE_TAKEN = 4;  // Camera state: Picture was taken.
+    private static final int MAX_PREVIEW_WIDTH = 1920;  // Max preview width that is guaranteed by Camera2 API
+    private static final int MAX_PREVIEW_HEIGHT = 1080;  // Max preview height that is guaranteed by Camera2 API
 
-    /**
-     * Camera state: Showing camera preview.
-     */
-    private static final int STATE_PREVIEW = 0;
-
-    /**
-     * Camera state: Waiting for the focus to be locked.
-     */
-    private static final int STATE_WAITING_LOCK = 1;
-
-    /**
-     * Camera state: Waiting for the exposure to be precapture state.
-     */
-    private static final int STATE_WAITING_PRECAPTURE = 2;
-
-    /**
-     * Camera state: Waiting for the exposure state to be something other than precapture.
-     */
-    private static final int STATE_WAITING_NON_PRECAPTURE = 3;
-
-    /**
-     * Camera state: Picture was taken.
-     */
-    private static final int STATE_PICTURE_TAKEN = 4;
-
-    /**
-     * Max preview width that is guaranteed by Camera2 API
-     */
-    private static final int MAX_PREVIEW_WIDTH = 1920;
-
-    /**
-     * Max preview height that is guaranteed by Camera2 API
-     */
-    private static final int MAX_PREVIEW_HEIGHT = 1080;
-
-    /**
-     * {@link TextureView.SurfaceTextureListener} handles several lifecycle events on a
-     * {@link TextureView}.
-     */
     private final TextureView.SurfaceTextureListener mSurfaceTextureListener
-            = new TextureView.SurfaceTextureListener() {
+            = new TextureView.SurfaceTextureListener() {  // {@link TextureView.SurfaceTextureListener} handles several lifecycle events on a {@link TextureView}.
 
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture texture, int width, int height) {
@@ -559,13 +524,15 @@ public class Camera2BasicFragment extends Fragment
 
                 // We fit the aspect ratio of TextureView to the size of preview we picked.
                 int orientation = getResources().getConfiguration().orientation;
+/*
                 if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
                     mTextureView.setAspectRatio(
-                            mPreviewSize.getWidth(), mPreviewSize.getHeight());
+                    mPreviewSize.getWidth(), mPreviewSize.getHeight());
                 } else {
                     mTextureView.setAspectRatio(
-                            mPreviewSize.getHeight(), mPreviewSize.getWidth());
+                    mPreviewSize.getHeight(), mPreviewSize.getWidth());
                 }
+*/
 
                 // Check if the flash is supported.
                 Boolean available = characteristics.get(CameraCharacteristics.FLASH_INFO_AVAILABLE);

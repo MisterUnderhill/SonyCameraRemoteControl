@@ -20,19 +20,19 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Start of Camera2 Fragment
+//        lensZoom.setMax(100);     // crashes app
+//        lensZoom.setMin(0);       // crashes app
+        lensZoom=(SeekBar)findViewById(R.id.lensZoom);
+        lensZoom.setOnSeekBarChangeListener(this);
+
+/*        // Start of Camera2 Fragment
         if (null == savedInstanceState) {
             getFragmentManager().beginTransaction()
                     .replace(R.id.container, Camera2BasicFragment.newInstance())
                     .commit();
         }
         // End of Camera2 Fragment
-
-//        lensZoom.setMax(100);     // crashes app
-//        lensZoom.setMin(0);       // crashes app
-        lensZoom=(SeekBar)findViewById(R.id.lensZoom);
-        lensZoom.setOnSeekBarChangeListener(this);
-
+*/
     }
 
     @Override
