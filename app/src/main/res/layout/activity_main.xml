@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="uk.co.lost_boyproductions.sonycameraremotecontrol.MainActivity">
@@ -18,7 +19,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/lensZoomMinLabel"
         app:layout_constraintRight_toLeftOf="@+id/lensZoomMaxLabel"
-        app:layout_constraintHorizontal_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/lensZoomMinLabel"
@@ -30,7 +33,8 @@
         android:textAlignment="textEnd"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/lensZoomMaxLabel"
@@ -42,19 +46,27 @@
         android:textAlignment="textStart"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="16dp" />
 
     <SurfaceView
         android:id="@+id/camerapreview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.91"
-        tools:layout_editor_absoluteX="-142dp"
-        app:layout_constraintDimensionRatio="w,4:3"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="0dp"
         android:layout_marginTop="0dp"
+        android:layout_weight="0.91"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="0dp" />
+        app:layout_constraintDimensionRatio="h,3:4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintVertical_bias="0.5" />
 
+    <uk.co.lost_boyproductions.sonycameraremotecontrol.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
 </android.support.constraint.ConstraintLayout>

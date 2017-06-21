@@ -409,13 +409,13 @@ public class Camera2BasicFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_camera2_basic, container, false);
+        return inflater.inflate(R.layout.activity_main, container, false);
     }
 
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
-        view.findViewById(R.id.picture).setOnClickListener(this);
-        view.findViewById(R.id.info).setOnClickListener(this);
+//        view.findViewById(R.id.picture).setOnClickListener(this);
+//        view.findViewById(R.id.info).setOnClickListener(this);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
     }
 
@@ -873,7 +873,7 @@ public class Camera2BasicFragment extends Fragment
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
+/*        switch (view.getId()) {
             case R.id.picture: {
                 takePicture();
                 break;
@@ -888,7 +888,7 @@ public class Camera2BasicFragment extends Fragment
                 }
                 break;
             }
-        }
+        }*/
     }
 
     private void setAutoFlash(CaptureRequest.Builder requestBuilder) {
