@@ -7,6 +7,27 @@
     android:layout_height="match_parent"
     tools:context="uk.co.lost_boyproductions.sonycameraremotecontrol.MainActivity">
 
+    <SurfaceView
+        android:id="@+id/camerapreview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.91"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,3:4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <uk.co.lost_boyproductions.sonycameraremotecontrol.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true" />
+
     <SeekBar
         android:id="@+id/lensZoom"
         android:layout_width="0dp"
@@ -49,25 +70,5 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginEnd="16dp" />
 
-    <SurfaceView
-        android:id="@+id/camerapreview"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_weight="0.91"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="h,3:4"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <uk.co.lost_boyproductions.sonycameraremotecontrol.AutoFitTextureView
-        android:id="@+id/texture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true" />
 
 </android.support.constraint.ConstraintLayout>
