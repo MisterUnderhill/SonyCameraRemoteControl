@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 // Start of Camera snippet
 import android.graphics.PixelFormat;
-import android.hardware.Camera;
+import android.hardware.camera2;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     int lensZoomOldPosition = 50; // set to the same value as android.progress in layout definition
 
     // Start of Camera snippet
-    @SuppressWarnings("deprecation")    // this suppresses the warning that android.hardware.Camera is deprecation
+//    @SuppressWarnings("deprecation")    // this suppresses the warning that android.hardware.Camera is deprecation
     Camera camera; // camera class variable
     SurfaceView camView; // drawing camera preview using this variable
     SurfaceHolder surfaceHolder; // variable to hold surface for surfaceView which means display
