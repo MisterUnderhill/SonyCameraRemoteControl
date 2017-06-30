@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         lensZoom=(SeekBar)findViewById(R.id.lensZoom);
         lensZoom.setOnSeekBarChangeListener(this);
 
-/*        // Start of Camera2 Fragment
-        if (null == savedInstanceState) {
-            getFragmentManager().beginTransaction()
-                    .replace(R.id.container, Camera2BasicFragment.newInstance())
-                    .commit();
-        }
+        // Start of Camera2 Fragment
+//        if (null == savedInstanceState) {
+//            getFragmentManager().beginTransaction()
+//                    .add(R.id.container, Camera2BasicFragment.newInstance())
+//                   .commit();
+//        }
         // End of Camera2 Fragment
-*/
+
     }
 
     @Override
